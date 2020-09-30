@@ -1,0 +1,54 @@
+{% extends "../prog_lesson_template.twig" %}
+
+{% block title %}
+    String avagy szöveg
+{% endblock %}
+
+{% block content %}
+
+    <div>
+        Feladata a szövegek tárolása
+        <br>
+        A string karaktereknek a listája, viszont nem konkrétan listaként kell megadni
+        <br>
+        A szövegeket össze lehet adni, ilyenkor egymás mögé írjuk öket
+    </div>
+
+    <pre class="code-block">
+        szoveg = "szoveg"
+        szoveg2 = 'szoveg'
+
+        szoveg3 = 'a' + "b"
+    </pre>
+
+    <div>
+        Mint ahogy említve volt a szövegek listák, így lehet őket indexekkel hsználni
+    </div>
+
+    <pre class="code-block">
+        szoveg = 'abcd'
+        b = szoveg[1]
+        cd = szoveg[3:]
+        bc = szoveg[1:3]
+
+        abc = 'a' + b + szoveg[2:3]
+    </pre>
+
+    <ul>
+    Fügvények:
+        <li>upper()</li>
+        <li>lower()</li>
+        <li>replace()</li>
+        <li>startswith()</li>
+        <li>split()</li>
+    </ul>
+
+    <ul>
+        Linkek:
+        <li>https://www.w3schools.com/python/python_strings.asp</li>
+    </ul>
+
+{% endblock %}
+
+
+

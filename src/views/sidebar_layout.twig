@@ -1,0 +1,41 @@
+{% extends "layout.twig" %}
+
+{% block styles %}
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            position: absolute;
+            display: flex;
+            top: 0;
+            bottom: 0;
+        }
+
+        .sidebar {
+            background: blanchedalmond;
+        }
+    </style>
+{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+        <div class="sidebar">
+            <div>
+                LOGO
+            </div>
+            <nav>
+                {{ create_nav() }}
+            </nav>
+        </div>
+        <main>
+            {% block main %}
+
+            {% endblock %}
+
+        </main>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,103 @@
+{% extends "../prog_lesson_template.twig" %}
+
+{% block title %}
+    Integer vagy számok
+{% endblock %}
+
+{% block content %}
+    <div>
+        Ez tipikusan több féleképpen jelenik meg
+    </div>
+
+    <ul>
+        A Python ban két faja számot különböztetünk meg:
+        <li>int (integer) - egész szám</li>
+        <li>float - törtszám</li>
+    </ul>
+
+    <div>
+        A megkülönböztetésük a számítógépes aábrázolásuk miatt van, de ezt majd
+        csak az elméleti részél / szóbelin fogjuk tárgyalni.
+    </div>
+
+    <div>
+        Pro tip, ha lehet használjuk egész számokat, mert kerekítési hibák
+        léphetnek fel a float-ok nál.
+    </div>
+
+    <div>
+        Érdekesség:
+            Egy egész bármekkora lehet (Ez sok nyelvben limitált)
+    </div>
+
+    Létrehozása:
+    <div>
+        <pre class="code-block">
+            3
+            x = -3
+            a = b = 5
+        </pre>
+        <div>
+            Bár 'a' és 'b' is 5 lesz ezt a fajta megadást érdemes elkerülni és
+            teljsen kiírni hogy
+        </div>
+        <pre class="code-block">
+            a = 5
+            b = 5
+        </pre>
+        <div>
+            Float ok
+        </div>
+        <pre class="code-block">
+            some_float = 13.0
+        </pre>
+    </div>
+    <div>
+        <ul>
+        Műveletek számokkal:
+            <li>Összeadás :: +</li>
+            <li>Kivonás :: -</li>
+            <li>Szorzás :: *</li>
+            <li>Osztás :: /</li>
+            <li>Modulo :: %</li>
+            <li>Egész osztás :: //</li>
+            <li>Emelés :: **</li>
+        </ul>
+        <div>
+            Példa:
+        </div>
+        <pre class="code-block">
+            3 +  5  # 8
+            3 -  5  # -2
+            3 *  5  # 15
+            3 /  5  # 0.6
+
+            3 %  5  # 3
+            8 %  5  # 3
+
+            3 // 5  # 0
+            8 // 5  # 1
+
+            3 ** 5  # 125 avagy 3 ^ 5
+            2 ** 10 # 1024
+        </pre>
+
+
+        <ul>
+            Érdekes függvényei:
+            <li>round( float ) -> int   # Rendes kerekítés</li>
+            <li>ceil( float ) -> int    # Felfele 'kerekít'</li>
+            <li>floor( float ) -> int   # Lefele 'kerekít'</li>
+        </ul>
+
+        <pre>
+        Learn more @:
+        * https://docs.python.org/3/tutorial/introduction.html#numbers
+        </pre>
+
+    </div>
+
+{% endblock %}
+
+
+

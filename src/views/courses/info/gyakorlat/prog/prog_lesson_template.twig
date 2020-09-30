@@ -1,0 +1,21 @@
+{% extends 'sidebar_layout.twig' %}
+
+{% block main %}
+    
+    <div>
+        <a href="/info/prog">Back to parent</a>
+    </div>
+
+    <h3>
+    {% block title %}
+        No title given
+    {% endblock %}
+    </h3>
+
+    <div>
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+{% endblock %}

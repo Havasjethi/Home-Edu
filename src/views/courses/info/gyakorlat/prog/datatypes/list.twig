@@ -1,0 +1,111 @@
+{% extends "../prog_lesson_template.twig" %}
+
+{% block title %}
+    Listák avagy majdnem tömbök
+{% endblock %}
+
+{% block content %}
+    <h3>
+        Listák
+    </h3>
+
+    <div>
+        Olyan típus, mely több értéket tud eltárolni, és a mérete pedig
+        futás közben tud változni.
+    </div>
+
+    <div>
+
+        A tárol értékek lehetnekek különböző típusúak
+        <pre class="code-block">
+            szamok_listaja = [1, 2, 3, 4]
+
+            szovegek_listaja = ['a', 'b', 'c', 'd']
+
+            vegyes_lista = ['a', 1, [], 'b', 3]
+        </pre>
+    </div>
+
+    <h5>Elérés</h5>
+
+    <div>
+        A listában található elemeket indexekkel elhet elérni, ami az elárolt értéket listabeli
+        pozíciójától függ.
+        Az értékek indexelése 0 -tól kezdődik, és egyesével nő.
+    </div>
+
+    <div>
+        A Python nyelv egy érdekessége, hogy negatív számokkal is lehet elemeket elérni, ilyenkor
+        hátulról mondjuk meg, hogy hanyadik értéket szeretnénk.
+    </div>
+
+    <pre>
+        +---+---+---+---+---+---+
+        | P | y | t | h | o | n |
+        +---+---+---+---+---+---+
+        0   1   2   3   4   5
+        -6  -5  -4  -3  -2  -1
+    </pre>
+
+    <pre class="code-block">
+        lista = [1, 2, 'c', 'd']
+
+        lista[0]   # 1
+        lista[2]   # 'c'
+
+        lista[0] = 13   # [13, 2, 'c', 'd']
+    </pre>
+
+    <div>
+        Az értéket el el lehet érni, vagy akár felül is lehet írni.
+
+        Feladatok:
+        * létrehozni, megváltoztatni
+    </div>
+
+    <h5>
+        Rész tömbök
+    </h5>
+
+    <div>
+
+        Lehetőségünk van egyszerre nem csak egy elemet lekérni a listából, hanem egy
+        részét is, ilyenkor meg kell adni, az első valamint indexet, valamint az utolsó
+        elem indexét, ami már nem lesz benne a rész listában.
+        <br />
+        // Érdekesség ezt ki lehet egészíteni, hogy csak kihagyjuk minden hanyadik elemet tegyük bele a listába
+    </div>
+
+    <pre class="code-block">
+        lista = [1,2,3,4]
+
+        lista[0:4]
+        lista[:]     # Ha elhagyjuk a számokat, akkor a lehető leg-
+        # nagyobb/kisebb helyettesítődik be
+        lista[0:4000]    # nem baj, ha túl nagy számot írunk
+        lista[1:]
+        lista[:2]
+
+        lista[::2]  # Olvasása: Az egész listából vedd minden második számot (az elsőtől kezdve)
+    </pre>
+
+    <div>
+        <ul>
+            Függvényei:
+            <li>len( list ) :: Nem az övé, de meg lehet rá hívni</li>
+            <li>append( element ) :: Hozzáad egy elemet a legvégére</li>
+            <li>pop( ) :: Kiveszi a lista utolsó elemét</li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+        Feladatok:
+            <li>Résztömbök létrehozása</li>
+            <li>Indexelés próbálgatása</li>
+        </ul>
+    </div>
+{% endblock %}
+
+
+
