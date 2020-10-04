@@ -1,0 +1,36 @@
+{% extends "../prog_lesson_template.twig" %}
+
+{% block title %}
+    Elágazás
+{% endblock %}
+
+{% block content %}
+    <p>Legalapvetőbb kontrol forma</p>
+    <p>Lehetővé teszi, hogy egyes kódrészlet csak bizonyos esetekben fusson le.</p>
+    <pre class="code-block">
+        if boolean:
+            pass
+    </pre>
+    <p>Ebben az esetben a boolean nem feltétlen kell már egy kész igaz hamis értéknek lennie, hanem egy 5 > 3 nál is beírható </p>
+    <p>A `pass` a Python ban van értelmezve, ami egy placeholder-je a kódnak. ( Majd tényleges kód lesz a helyén )</p>
+    <p>A `pass` helyén lévő kódrészlet csak abban az esetben fog lefutni, ha a boolean értéke True -ra értékelődik ki</p>
+
+    <p>Presze nem csak ez az egy pociónk van, hozzá tudunk fűzni akárhány `elif` és egy `else` ágat, ebben a sorrenben</p>
+    <pre class="code-block">
+        if boolean_1:
+            pass
+        elif boolean_2:
+            pass
+        elif boolean_3:
+            pass
+        else:
+            pass
+    </pre>
+    <p>Itt fontos megjegyezni, hogy mindig a legelső igaz ág fog lefutni, és ha egyik ág se volt igaz, akkor az else ág</p>
+    <p>Tehát a boolean_3-ban lévő ág csak akkor fut le, hogy ha sem boolean_1 sem a boolean_2 nem volt igaz </p>
+    <p>Az else ág meg csak akkor fut le, ha mindegyik előtte lévő ág feltétele hamis volt.</p>
+
+{% endblock %}
+
+
+

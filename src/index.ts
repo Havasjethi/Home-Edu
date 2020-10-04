@@ -1,8 +1,9 @@
 import express from "express";
 import {configured_router} from "./routes/router";
-import {extendFunction, twig} from "twig";
+import {extendFunction} from "twig";
 import path from "path";
 import {INavigationItem} from "./interfaces/INavigationItem";
+import { existsSync } from "fs";
 
 const app = express();
 export const BASE_VIEWS = path.join(__dirname, 'views');
@@ -28,6 +29,19 @@ const a: INavigationItem[] = [
 
 app.set('view engine', 'twig');
 app.set('views', BASE_VIEWS);
+
+app.get('**', (req, res, next) => {
+    const url = req.url;
+    const parts = url.split('.');
+    if (req.method == 'GET' && parts.pop() === 'css') {
+        const style_sheet = __dirname + '/static/css' + parts.join('.') + '.css';
+        if (existsSync(style_sheet)) {
+            res.sendFile(style_sheet);
+        }
+    } else {
+        next();
+    }
+});
 
 app.use('/', configured_router);
 

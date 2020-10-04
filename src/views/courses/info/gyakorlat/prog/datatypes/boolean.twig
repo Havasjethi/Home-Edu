@@ -5,65 +5,60 @@
 {% endblock %}
 
 {% block content %}
-  <div class="content">
+  <div>
+    Cél megállapítani, hogy egy kifejezés igaz-e vagy amis
+  </div>
+  <div>
+    Ez a if-else vezérlési eszköznél lesz felhasználva, hogy melyik kódrészlet fusson le
+  </div>
+  <div>
+    Legalapvetőbb értékek:
+    <br>
+    <pre class="code-block">
+      True   #  Igaz
+      False  #  Hamis
+    </pre>
+    <br>
     <div>
-      Cél megállapítani, hogy egy kifejezés igaz-e vagy amis
+      Ezeket az elemi értékeke fogjuk lekreálni a különböző operátorok segítségével
     </div>
     <div>
-      Ez a if-else vezérlési eszköznél lesz felhasználva, hogy melyik kódrészlet fusson le
+      Számokról az 'alap' matmatikai operációkat használjuk
     </div>
+
+    <pre class="code-block">
+                      # Igaz, ha ...
+      num_1 == num_2  #     a két szám egyenlő
+      num_1 != num_2  #     a két szám nem egyenlő
+      num_1 &gt;  num_2  #     a az első szám nagyobb
+      num_1 &gt;= num_2  #     a az első szám nagyobb egyenlő
+      num_1 &lt;  num_2  #     a második szám kisebb
+      num_1 &lt;= num_2  #     a második szám kisebb egyenlő
+    </pre>
     <div>
-      Legalapvetőbb értékek:
-      <br>
-      <pre class="code-block">
-        True   #  Igaz
-        False  #  Hamis
-      </pre>
-      <br>
-      <div>
-        Ezeket az elemi értékeke fogjuk lekreálni a különböző operátorok segítségével
-      </div>
-      <div>
-        Számokról az 'alap' matmatikai operációkat használjuk
-      </div>
+      A másik fontos dolog, az értékekkel való műveletek, itt 3 művelet létezik:
+      <dl>
+        <dt>Negálás</dt>
+        <dd>Jele: !; Egy érték ellenkezőját adja vissza !Igaz => Hamis, !Hamis => Igaz</dd>
+        <dt>Éselés</dt>
+        <dd>Jele: and; Ha a megadott értékek igazak akkor igazat ad vissza, egyébként hamis;
+          Igaz and Igaz => Igaz</dd>
+        <dt>Vagyolás</dt>
+        <dd>Jele: or; Ha a megadott értékek bármelyike igaz, akkor igazat ad vissza</dd>
+      </dl>
+      Megjegyzés: A kiértékelés balról jobbra végződik el, viszont a zárójel módosítja a sorrendet!
+    </div>
+    <br>
+
+    <div class="section">
+      <p>A következő a probléma, meg kell határozni, hogy kell-e esernyőt vinni egy gyalog útra vagy sem.</p>
+      <p>Ennek különböző faktorai lehetnek, pl.: napos az idő, hosszú-e az út, esik-e, vagy eső felhős az ég</p>
+      <p>Tekintsük ezeket elemi változóknak és írunk fel belőle egy rövid programot</p>
 
       <pre class="code-block">
-                        # Igaz, ha ...
-        num_1 == num_2  #     a két szám egyenlő
-        num_1 != num_2  #     a két szám nem egyenlő
-        num_1 &gt;  num_2  #     a az első szám nagyobb
-        num_1 &gt;= num_2  #     a az első szám nagyobb egyenlő
-        num_1 &lt;  num_2  #     a második szám kisebb
-        num_1 &lt;= num_2  #     a második szám kisebb egyenlő
+        if long_way and dark_clouds or raining:
+          bring_umbrella()
       </pre>
-      <div>
-        A másik fontos dolog, az értékekkel való műveletek, itt 3 művelet létezik:
-        <dl>
-          <dt>Negálás</dt>
-          <dd>Jele: !; Egy érték ellenkezőját adja vissza !Igaz => Hamis, !Hamis => Igaz</dd>
-          <dt>Éselés</dt>
-          <dd>Jele: and; Ha a megadott értékek igazak akkor igazat ad vissza, egyébként hamis;
-            Igaz and Igaz => Igaz</dd>
-          <dt>Vagyolás</dt>
-          <dd>Jele: or; Ha a megadott értékek bármelyike igaz, akkor igazat ad vissza</dd>
-        </dl>
-        Megjegyzés: A kiértékelés balról jobbra végződik el, viszont a zárójel módosítja a sorrendet!
-      </div>
-      <div>
-        A következő a probléma, meg kell határozni, hogy kell-e esernyőt vinni egy gyalog útra vagy sem.
-        <br>
-        Ennek különböző faktorai lehetnek, pl.: napos az idő, hosszú-e az út, esik-e, vagy eső felhős az ég
-        <br>
-        Tekintsük ezeket elemi változóknak és írunk fel belőle egy rövid programot
-        <pr class="code-block">
-          if long_way and dark_clouds or raining:
-            bring_umbrella()
-        </pr>
-      </div>
     </div>
   </div>
-
 {% endblock %}
-
-
-
