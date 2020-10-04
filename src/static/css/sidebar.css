@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+}
+
+.sidebar {
+    background: blanchedalmond;
+    width: 15em;
+}
+
+.sidebar ul {
+    padding: 0px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 1em;
+    color: rebeccapurple;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar li a.active {
+    color: #B62440;
+}
+
+.sidebar a:hover {
+    color: yellow;
+    background-color: violet;
+}
+
+a {
+    text-decoration: none;
+}
