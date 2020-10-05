@@ -6,7 +6,8 @@ import {INavigationItem} from "./interfaces/INavigationItem";
 import { existsSync } from "fs";
 
 const app = express();
-export const BASE_VIEWS = path.join(__dirname, 'views');
+export const BASE_VIEWS = path.join(__dirname, '../src', 'views');
+export const BASE_CSS = path.join(__dirname, '../src', 'static', 'css');
 
 extendFunction('some', () => 'some works');
 
@@ -34,7 +35,7 @@ app.get('**', (req, res, next) => {
     const url = req.url;
     const parts = url.split('.');
     if (req.method == 'GET' && parts.pop() === 'css') {
-        const style_sheet = __dirname + '/static/css' + parts.join('.') + '.css';
+        const style_sheet = BASE_CSS + parts.join('.') + '.css';
         if (existsSync(style_sheet)) {
             res.sendFile(style_sheet);
         }

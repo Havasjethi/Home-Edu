@@ -1,11 +1,12 @@
 {
-  "name": "home_server",
+  "name": "home_edu",
   "version": "0.0.1",
-  "description": "This will be huge..",
+  "description": "Hungarian Educational site",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node src/index.ts",
-    "start": "ts-node src/index.ts"
+    "prestart": "tsc",
+    "start": "node dist/index.js"
   },
   "repository": {
     "type": "git",
