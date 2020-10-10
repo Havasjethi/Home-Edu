@@ -8,6 +8,7 @@ import { existsSync } from "fs";
 const app = express();
 export const BASE_VIEWS = path.join(__dirname, '../src', 'views');
 export const BASE_CSS = path.join(__dirname, '../src', 'static', 'css');
+const PORT = process.env.PORT || 3000;
 
 extendFunction('some', () => 'some works');
 
@@ -46,5 +47,4 @@ app.get('**', (req, res, next) => {
 
 app.use('/', configured_router);
 
-const port = 3000;
-app.listen(port, () => console.log(`App is listening to: http://localhost:${port}`));
+app.listen(PORT, () => console.log(`App is listening to: http://localhost:${PORT}`));
