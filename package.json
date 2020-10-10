@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node src/index.ts",
-    "prestart": "tsc",
+    "prestart": "npm install",
     "start": "node dist/index.js"
   },
   "repository": {
