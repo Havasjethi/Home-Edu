@@ -1,6 +1,7 @@
 import {Router} from "express";
 import {datatype_router} from "./sub_routers/datatype_router";
 import {control_router} from "./sub_routers/control_router";
+import {python_router} from "./sub_routers/python_spec_router";
 
 // Route: /info/prog
 
@@ -13,3 +14,5 @@ programing_router.get('/', ((req, res, next) => {
 programing_router.use('/', datatype_router);
 
 programing_router.use('/', control_router);
+
+programing_router.use('/', python_router);
