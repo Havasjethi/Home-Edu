@@ -1,0 +1,42 @@
+{% extends "templates/collapsable.twig" %}
+
+{% block header%}
+    <h3>Adat típusok</h3>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <div>
+            A változók értékeket tárolnak el
+            Célja, hogy később fel legyen használva
+        </div>
+        <ul>
+            Műveletek vele:
+            <li>Létrehozás</li>
+            <li>Értékadás</li>
+            <li>Törlés</li>
+        </ul>
+
+        <div>
+            Ezek kezek közül itt most az értékadásra és a létrehozásra fogunk fókiszálni
+            A törlés nem lesz fontos a mi esetünkben.
+            Fontos, hogy csak olyan változókra tudunk hivatkozni / elérni amit már létrehoztunk.
+
+            Ha olyan változót szeretnénk elérni, ami nem létezik a Python egy interpreter egy hibát
+            fog dobni nekünk valami hasonlót:: `NameError: name '&lt;v_name&gt; is not defined`
+        </div>
+
+        <ul>
+            Részanyagok:
+            <li><a href="/info/prog/integer">Szám | Integers</a></li>
+            <li><a href="/info/prog/boolean">Boolean | Strings</a></li>
+            <li><a href="/info/prog/list">Lista | Lists</a></li>
+            <li><a href="/info/prog/string">Szöveg | Boolean</a></li>
+            <li><h5>Szótárak</h5></li>
+            <li><h5>Castolás</h5></li>
+        </ul>
+    </div>
+{% endblock %}
+
+
+

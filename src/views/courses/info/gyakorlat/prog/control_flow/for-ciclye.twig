@@ -1,9 +1,66 @@
 {% extends "../prog_lesson_template.twig" %}
 
 {% block title %}
-
+    <h2>For Ciklusok</h2>
 {% endblock %}
 
 {% block content %}
+    <p>
+        Egy gyakran használt vezérlési form, amely arra szolgál, hogy egy kollekción játjunk végig egyesével
+    </p>
+    <p>
+        Ezt elengedhetetlen tudni ahhoz, hogy kompex programokat, logikát valósítsunk meg
+    </p>
+    <p>
+        Nézzünk is egy egyszerű példát, list elemeinek kiíratása
+    </p>
+    <pre class="code-block">
+        lista = [ 1, 2, 3, 4, 5 ]
+
+        for elem in lista:
+            print(elem)
+    </pre>
+    <pre class="code-block">
+        Expected output:
+        1
+        2
+        3
+        4
+        5
+    </pre>
+
+    <div>
+
+        <ul>
+            <li>Eléször létrehozzuk a listát</li>
+            <li>Majd átadjuk a listát a ciklusnak, és megmondjuk, hogy az elemeknre hogyan szeretnénk hivathozni</li>
+            <li>Megírjuk egy blokkban az utasíításokat, amiket el szeretnénk végezni</li>
+        </ul>
+    </div>
+
+    <p>
+        A for ciklusnak a belseje annyiszor fog lefutni, ahágy elem van a kollekcióban
+    </p>
+
+    <p>
+        A vezérlési fomák egymásba ágyahatóak, így lehet if-et for ciklusba tenni, vagy fordítva,
+        valamint tetszőleges mélységig lehet elmenni, bár általában, jobb minél egyszerűbben megoldani a problámákat,
+        és csak ott használni sok mély beágyazást, ahol szügséges
+    </p>
+    <div>
+        Példa beágyazásra:
+
+        <pre class="code-block">
+            for x in [1, 2, 3, 4]:
+                    for y in [5, 6, 7, 9]:
+                        print('x: ' + str(x) + ' y: ' + str(y))
+        </pre>
+    </div>
+    </p>
+
+    <p>
+        A ciklusok futását lehet manipulálni, de ezt majd később tárgyaljuk
+    </p>
+
 
 {% endblock %}

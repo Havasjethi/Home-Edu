@@ -1,0 +1,79 @@
+{% extends "$FILE$.twig" %}
+{% extends "../prog_lesson_template.twig" %}
+
+{% block title %}
+    <h3>Blokkok</h3>
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        A blokkok egy adott kódrészletet jelülnek, amik egy adott szinten vannak
+    </p>
+    <p>
+        Sok nyelvben { } közé teszik a kódot, valamint az egyes utasításokat ;-vel választják el
+    </p>
+    <p>
+        Itt Python-ban úgy valsóították meg, hogy minden sorba egy utasítást írnuk, így nincs szükség a ;-re
+        <br>
+        <span>SideNote: Viszot lehet ;-t használni, hgoy egy sorba több utasítsát is írjunk, de ez kerülendő</span>
+    </p>
+
+    <p>
+        A blokkokat meg space-ek vagy tab-ok segíségével oldjuk meg, így nagy problát tud okozni, ha egy adott sor akár egy space-el kiljebb vagy beljebb van
+    </p>
+    <p>
+        Blokkokat az egyes Vezérlési formák, oszályok, függvények fognak kapni, viszont jó kedvünkben nem tudjuk létrehozni
+    </p>
+    <p>
+        Még egy fontos info, amint visszáb lépünk az ellőző indentálási szintre, ott a blokk véget fog érni
+    </p>
+    <pre class="code-block">
+        if True:
+            print('a')
+            print('b')
+            print('c')
+
+        if False:
+
+            print('Ennek nem szabadna lefutnia
+
+        else:
+
+            print('Hello')
+    </pre>
+    <p>
+        Itt jól látható, hogy az If-Else vezérlési formának a blokkja beljebb van kezdve, valamint nem számít,
+        hogy ki van-e hagyva sor, mert a blokk csak az identálás váltása során fog végetérni
+    </p>
+    <p>
+        A beljebb kezdésnél ajánlott 4 vagy 2 space-nek a használata, minden egyes blokk esetében
+    </p>
+
+    <p>
+        Ennek leginkább esztétikai okai vannak, az inkonzisztens identálás nehezíti a kód olvasását, így a program megértését
+    </p>
+
+    <p>
+        Még ajánlott tudni a Python `ṗass` statement-jéről, ami egy placeholder-ként szolgákl
+    </p>
+    <p>
+        Feladata csak jelezni, hogy ott majd lesz egy blokk, csak jelenleg még nincs elkészítve
+    </p>
+
+    <pre class="code-block">
+        def sum(szamok):
+            pass
+
+        lista = [ 1, 2, 3, 4, 5, 6 ]
+
+        osszesen = sum(lista)
+        print("Lista összege: " + osszesen)
+    </pre>
+
+    <p>
+        Itt a `sum` függvény-nek a belseje nincs megvalósítva, viszont az utána lévő részeke meg lehet valósítani,
+        valamint így is működik a program
+    </p>
+
+{% endblock %}

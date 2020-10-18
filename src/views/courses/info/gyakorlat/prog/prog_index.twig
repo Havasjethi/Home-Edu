@@ -1,76 +1,26 @@
 {% extends "sidebar_layout.twig" %}
 
+{% block styles %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="/lesson_summary.css" />
+{% endblock %}
+
+
 {% block main %}
-    <div>
-        <h3>Adat típusok</h3>
 
-        <div>
-            <div>
-                A változók értékeket tárolnak el
-                Célja, hogy később fel legyen használva
-            </div>
-            <ul>
-                Műveletek vele:
-                <li>Létrehozás</li>
-                <li>Értékadás</li>
-                <li>Törlés</li>
-            </ul>
+    {% include './datatypes/index.twig' %}
 
-            <div>
-                Ezek kezek közül itt most az értékadásra és a létrehozásra fogunk fókiszálni
-                A törlés nem lesz fontos a mi esetünkben.
-                Fontos, hogy csak olyan változókra tudunk hivatkozni / elérni amit már létrehoztunk.
+    {% include './python_specific/index.twig' %}
 
-                Ha olyan változót szeretnénk elérni, ami nem létezik a Python egy interpreter egy hibát
-                fog dobni nekünk valami hasonlót:: `NameError: name '&lt;v_name&gt; is not defined`
-            </div>
+    {% include './control_flow/index.twig' %}
 
-            <ul>
-                Részanyagok:
-                <li>Integers</li>
-                <li>Strings</li>
-                <li>Lists</li>
-                <li>Boolean</li>
-            </ul>
-        </div>
-        <div>
-            <h5><a href="/info/prog/integer">Szám</a></h5>
-            <h5><a href="/info/prog/boolean">Boolean</a></h5>
-            <h5><a href="/info/prog/list">Lista</a></h5>
-            <h5><a href="/info/prog/string">Szöveg</a></h5>
-            <h5><a href="/info/prog/cast">Castolás</a></h5>
-            <h5>Szótárak</h5>
-        </div>
-    </div>
-
-    <div>
-        <h3>Python sajátosságok</h3>
-        <div>
-            <h5>Objektumok</h5>
-            <h5>Blokkok & Identálás</h5>
-        </div>
-    </div>
-
-    <div>
-        {% include './control_flow/index.twig' %}
-    </div>
-
-    <div>
-        <h3>Ciklusuk</h3>
-        <div>
-            <h5>For</h5>
-            <h5>While</h5>
-            <h5>Break, Continue</h5>
-        </div>
-    </div>
-
-    <div>
+    <div class="lesson-header">
         <h3>Fájl kezelés</h3>
     </div>
 
-    <div>
+    <div class="lesson-header">
         <ul>
-            Hasznos, de feltétlen szükséges = kihagyható
+            <h4>Hasznos, de feltétlen szükséges = kihagyható</h4>
             <li>Függvények</li>
             <li>Osztályok</li>
             <li>Osztály objektum</li>
