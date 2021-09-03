@@ -1,9 +1,14 @@
 {
-  "name": "home_server",
+  "name": "home_edu",
   "version": "0.0.1",
   "description": "This will be huge..",
   "main": "index.js",
+  "private": true,
+  "engines": {
+    "node": "12.0.0"
+  },
   "scripts": {
+    "build": "tsc",
     "dev": "ts-node src/index.ts",
     "start": ""
   },
